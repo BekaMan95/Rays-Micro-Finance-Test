@@ -58,26 +58,12 @@ composer install
 php artisan serve
 ```
 
-- Visit `localhost:8000/api` to reach the endpoints
+- Visit Base URL `localhost:8000/api` for the endpoints
 ```bash
-# Create music (replace TOKEN with actual JWT token)
 curl -X POST http://localhost:8000/api/cities \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
-  -d '{
-    "id": "101",
-	"name": "Frankfurt",
-    "region": "Hesse",
-    "country": "Germany",
-    "postal_code": "3000",
-    "lati": "50.1109",
-    "long": "8.6821",
-    "time_zone": "Europe/London",
-    "currency_code": "EUR",
-    "population": 100000,
-    "languages_spoken": ["Dutch"],
-    "current_gdp_contribution": 32.66
-}'
+  -d '{"id": "101","name": "Frankfurt","region": "Hesse","country": "Germany","postal_code": "3000","lati": "50.1109","long": "8.6821","time_zone": "Europe/London","currency_code": "EUR","population": 100000,"languages_spoken": ["Dutch"],"current_gdp_contribution": 32.66}'
 ```
 
 #### All Set!
